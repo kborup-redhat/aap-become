@@ -1,5 +1,5 @@
 collections:
-  - name:  fedora.linux_system_roles
-    version: ">=1.56.0"
-    source: https://galaxy.ansible.com
+ - name:  fedora.linux_system_roles
+   version: ">=1.56.0"
+   source: https://galaxy.ansible.com
 
