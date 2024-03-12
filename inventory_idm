@@ -3,7 +3,7 @@ idm:
     idmserver:
       hosts:
         idm1.idm.local:
-          ansible_host: idm1.local
+          ansible_host: idm1.idm.local
           ipaserver_realm: IDM.LOCAL
           ipaserver_setup_ca: true
           ipaserver_setup_dns: true
@@ -11,7 +11,6 @@ idm:
           ipaserver_allow_zone_overlap: true
           ipaserver_forwarders:
             - 192.168.122.1
-
           defaultshell: /bin/bash
           domain_resolution_order: idm.local
     ipaservers:
