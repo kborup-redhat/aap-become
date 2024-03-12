@@ -36,7 +36,7 @@ idm:
           ipareplica_forwarders:
             - 192.168.122.1 
   vars:
-    ipaadmin_password: abc123
-    ipadm_password: abc123
-    ipaserver_ad_domain: abc123
+    ipaadmin_password: abc123456
+    ipadm_password: abc123456
+    ipaserver_ad_domain: abc123456
 
