@@ -10,7 +10,7 @@ idm:
           ipaserver_auto_forwarders: true
           ipaserver_allow_zone_overlap: true
           ipaserver_forwarders:
-            - 182.168.122.1
+            - 192.168.122.1
 
           defaultshell: /bin/bash
           domain_resolution_order: idm.local
