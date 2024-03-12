@@ -1,5 +1,5 @@
 - name: Install replica
-  hosts: idmreplicas
+  hosts: ipareplicas
   collections:
     - redhat.rhel_idm
   roles:
