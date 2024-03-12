@@ -1,0 +1,8 @@
+[all]
+idm1.idm.local
+idm2.idm.local
+aap.idm.local
+
+[idmservers]
+idm1.idm.local
+idm2.idm.local

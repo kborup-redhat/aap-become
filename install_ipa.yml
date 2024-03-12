@@ -1,0 +1,20 @@
+- name: Install IDM
+   hosts: idmserver
+   collections:
+     - redhat.rhel_idm
+   roles:
+     - redhat.rhel_idm.ipaserver
+   tasks:
+     - name: Configure IDM
+       redhat.rhel_idm.ipaconfig:
+         ipaadmin_password: "{{ ipaadmin_password }}"
+         defaultshell: "{{ defaultshell }}"
+         domain_resolution_order: "{{ domain_resolution_order }}"
+
+ - name: Configure IDM
+   hosts: ipareplicas
+   collections:
+     - redhat.rhel_idm
+   roles:
+     - redhat.rhel_idm.ipareplica
+

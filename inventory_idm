@@ -1,0 +1,43 @@
+idm:
+  children:
+    idmserver:
+      hosts:
+        idm1.idm.local:
+          ansible_host: idm1.local
+          ipaserver_realm: IDM.LOCAL
+          ipaserver_setup_ca: true
+          ipaserver_setup_dns: true
+          ipaserver_auto_forwarders: true
+          ipaserver_allow_zone_overlap: true
+          ipaserver_forwarders:
+            - 182.168.122.1
+
+          defaultshell: /bin/bash
+          domain_resolution_order: idm.local
+    ipaservers:
+      hosts:
+        idm1.idm.local:
+        idm2.idm.local:
+      vars:
+        ipaserver_domain: idm.local
+    ipareplicas:
+      hosts:
+        idm02.idm.local:
+          ansible_host: idm2.idm.local
+          ipaservers:
+            - idm1.idm.local
+            - idm2.idm.local
+          ipareplicas:
+            - idm2.idm.local
+          ipareplica_setup_dns: true
+          ipareplica_dirsrv_pin: ""
+          ipareplica_http_pin: ""
+          ipareplica_no_pkinit: true
+          ipareplica_skip_conncheck: true
+          ipareplica_forwarders:
+            - 192.168.122.1 
+  vars:
+    ipaadmin_password: abc123
+    ipadm_password: abc123
+    ipaserver_ad_domain: abc123
+
