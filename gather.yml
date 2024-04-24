@@ -1,0 +1,10 @@
+i---
+- name: gather facts
+  hosts: all
+  gather_facts: true
+
+  tasks: 
+    - name: Gatherfacts
+      ansible.builtin.gather_facts:
+      register: hostfacts
+      ignore_errors: true
